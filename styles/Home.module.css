@@ -1,10 +1,12 @@
 .container {
-  padding: 0 2rem;
+  padding: 0 10rem;
+  color: #1b1b1b;
+  display: flex;
+  width: 100%;
 }
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -12,105 +14,151 @@
   align-items: center;
 }
 
-.footer {
+.nav {
   display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-top: 40px;
 }
 
-.footer a {
+.card {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-grow: 1;
+  width: 25%;
+  height: 80px;
+  padding: 1rem;
+  border: 1px solid #e1e1e1;
+  border-radius: 0.4rem;
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  color: #d3f13a;
+  background-color: #1b1b1b;
+  border-color: #1b1b1b;
 }
 
 .title a {
-  color: #0070f3;
-  text-decoration: none;
+  text-decoration: underline;
+  color: #1b1b1b;
+  text-decoration-color: #d3f13a;
+  border-radius: 0.4rem;
+  padding: 1rem 0.5rem;
+  margin-bottom: 30px;
+  font-weight: bold;
 }
 
 .title a:hover,
 .title a:focus,
 .title a:active {
   text-decoration: underline;
+  text-decoration-color: #1b1b1b;
 }
 
 .title {
-  margin: 0;
+  margin: 0 20px;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 2rem;
+  font-weight: normal;
 }
 
-.title,
-.description {
-  text-align: center;
-}
-
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-}
-
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
+.customButton {
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  cursor: pointer;
+  color: #666666;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
   text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+  text-shadow: 0px 1px 0px #ffffff;
+}
+.customButton:hover {
+  background: linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+  background-color: #f6f6f6;
+}
+.customButton:active {
+  position: relative;
+  top: 1px;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .grid {
+@media (max-width: 1000px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0.6rem;
+  }
+  .title {
+    margin: 40px 0;
+    font: 1rem;
+  }
+  .nav {
     width: 100%;
     flex-direction: column;
   }
+  .card {
+    width: 100%;
+  }
+}
+
+.page_container {
+  margin: 0;
+  color: #1b1b1b;
+}
+
+.spacingB {
+  margin-top: 4rem;
+  font-weight: bold;
+  padding: 0 4rem;
+}
+
+.inner {
+  background-color: #1b1b1b;
+  padding: 4rem;
+  color: #ffffff;
+}
+
+.span {
+  font-size: 24px;
+  font-style: italic;
+  padding: 10px 10px;
+  margin-left: -10px;
+  color: #141414;
+  margin-bottom: 100px;
+}
+.spacingS {
+  margin-top: 60px;
+}
+
+.button {
+  box-shadow: inset 0px 1px 0px 0px #a4e271;
+  background: linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+  background-color: #89c403;
+  border-radius: 6px;
+  border: 1px solid #74b807;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #528009;
+}
+.button:hover {
+  background: linear-gradient(to bottom, #77a809 5%, #89c403 100%);
+  background-color: #77a809;
+}
+.button:active {
+  position: relative;
+  top: 1px;
 }
